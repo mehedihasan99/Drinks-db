@@ -60,14 +60,22 @@
                   Search
                 </button>
               </div>
+              <!-- error msg -->
+              <div id="error-box" class="text-center mt-5">
+                <p class="fs-3 text-danger">Please input a valid value</p>
+                <div>
+                  <img id="spinner" src="./img/spinner.gif" alt="" />
+                </div>
+              </div>
               <!-- display drink -->
               <div class="row g-3 my-5" id="showDrink"></div>
             </div>
             <!-- show detail -->
             <div class="col-md-4 mb-5 mb-md-0 order-1 order-md-2">
               <div class="bg-info rounded" id="show-detail-title">
-                <h4 class="fs-4">Show Details</h4>
+                <h4 class="fs-4 fw-light">Show Details</h4>
               </div>
+              <div id="drink-details" class="mt-5"></div>
             </div>
           </div>
         </div>

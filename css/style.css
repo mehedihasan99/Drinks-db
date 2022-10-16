@@ -10,3 +10,11 @@
     justify-content: center;
     align-items: center;
 }
+
+#spinner {
+    width: 400px;
+}
+
+#error-box {
+    display: none;
+}
