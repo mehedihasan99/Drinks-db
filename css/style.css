@@ -1,0 +1,12 @@
+#nav-img {
+    width: 100px;
+    height: 50px;
+    border-radius: 100px;
+}
+
+#show-detail-title {
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

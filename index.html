@@ -21,6 +21,58 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <!-- header -->
+    <header>
+      <!-- nav -->
+      <nav class="navbar navbar-light bg-info">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img
+              src="./img/wine-splash.jpg"
+              alt=""
+              id="nav-img"
+              class="d-inline-block align-text-top"
+            />
+            <span class="ms-2"> Drink Heaven</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="container">
+          <div class="row my-5">
+            <div class="col-md-8 order-2 order-md-1">
+              <!-- input field -->
+              <div class="input-group mx-auto">
+                <input
+                  id="search-input"
+                  type="search"
+                  class="form-control p-3"
+                  placeholder="Search for a drink"
+                />
+                <button
+                  onclick="loadDrink()"
+                  id="search-button"
+                  type="button"
+                  class="btn btn-info"
+                >
+                  Search
+                </button>
+              </div>
+              <!-- display drink -->
+              <div class="row g-3 my-5" id="showDrink"></div>
+            </div>
+            <!-- show detail -->
+            <div class="col-md-4 mb-5 mb-md-0 order-1 order-md-2">
+              <div class="bg-info rounded" id="show-detail-title">
+                <h4 class="fs-4">Show Details</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- ------ js ---------- -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
