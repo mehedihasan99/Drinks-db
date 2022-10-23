@@ -18,3 +18,17 @@
 #error-box {
     display: none;
 }
+
+#spinner {
+    width: 100%;
+    display: none;
+}
+
+.spinner-img {
+    display: flex;
+    justify-content: center;
+}
+
+#spinner img {
+    width: 50%;
+}

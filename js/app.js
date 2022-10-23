@@ -1,11 +1,21 @@
+//
+const displaySpinner = (style) => {
+  document.getElementById("spinner").style.display = style;
+};
+const searchResult = () => {
+  const showDrink = document.getElementById("showDrink");
+  showDrink.innerText = "";
+};
 const loadDrink = () => {
   const searchText = document.getElementById("search-input").value;
   document.getElementById("search-input").value = "";
+  displaySpinner("block");
+  searchResult();
   document.getElementById("error-box").style.display = "none";
   if (searchText == "") {
-    const showDrink = document.getElementById("showDrink");
-    showDrink.innerText = "";
+    searchResult();
     document.getElementById("error-box").style.display = "block";
+    displaySpinner("block");
   } else {
     fetch(
       `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchText}`
@@ -17,6 +27,7 @@ const loadDrink = () => {
 };
 const displayError = (errMsg) => {
   document.getElementById("error-box").style.display = "block";
+  displaySpinner("block");
 };
 
 const displayDrink = (drinks) => {
@@ -38,6 +49,7 @@ const displayDrink = (drinks) => {
     const drinkDetailsContainer = document.getElementById("drink-details");
     drinkDetailsContainer.innerHTML = "";
   });
+  displaySpinner("none");
 };
 
 const loadDrinkDetails = (drinkId) => {
