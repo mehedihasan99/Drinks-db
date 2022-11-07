@@ -1,3 +1,10 @@
+const searchButton = document.getElementById("search-button");
+const searchInput = document.getElementById("search-input");
+
+searchInput.addEventListener("keypress", function (event) {
+  // event.preventDefault();
+  if (event.keyCode == 13) searchButton.click();
+});
 //
 const displaySpinner = (style) => {
   document.getElementById("spinner").style.display = style;
@@ -28,6 +35,8 @@ const loadDrink = () => {
 const displayError = (errMsg) => {
   document.getElementById("error-box").style.display = "block";
   displaySpinner("block");
+  const drinkDetailsContainer = document.getElementById("drink-details");
+  drinkDetailsContainer.innerHTML = "";
 };
 
 const displayDrink = (drinks) => {
